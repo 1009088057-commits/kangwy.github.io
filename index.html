@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>康汪洋 · 绿色AI作品集</title>
-    <!-- Font Awesome 6 免费图标库 -->
+    <title>康汪洋 · 作品集</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* ===== 全局 ===== */
@@ -15,8 +14,8 @@
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
-            background: #f5faf5;
-            color: #1e2a1e;
+            background: #f8f7f4;
+            color: #1e2a2e;
             line-height: 1.7;
         }
         a {
@@ -28,16 +27,17 @@
             margin: 0 auto;
             padding: 0 24px;
         }
+
         /* ===== 导航 ===== */
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(245, 250, 245, 0.88);
-            backdrop-filter: blur(12px);
+            background: rgba(26, 35, 53, 0.92);
+            backdrop-filter: blur(14px);
             padding: 16px 0;
-            border-bottom: 1px solid rgba(46, 125, 50, 0.10);
+            border-bottom: 2px solid rgba(100, 200, 255, 0.15);
             z-index: 1000;
         }
         .navbar .container {
@@ -49,11 +49,12 @@
         .navbar .logo {
             font-size: 1.2rem;
             font-weight: 700;
-            color: #1e3a1e;
+            background: linear-gradient(135deg, #4fc3f7, #81c784, #fff176);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .navbar .logo i {
-            color: #2e7d32;
-            margin-right: 6px;
+            -webkit-text-fill-color: #4fc3f7;
         }
         .navbar .nav-links {
             display: flex;
@@ -63,7 +64,7 @@
             font-size: 0.95rem;
         }
         .navbar .nav-links a {
-            color: #2d3a2d;
+            color: #cfd8e6;
             transition: color 0.2s;
             position: relative;
         }
@@ -74,11 +75,11 @@
             left: 0;
             width: 0;
             height: 2.5px;
-            background: #2e7d32;
+            background: linear-gradient(90deg, #4fc3f7, #81c784);
             transition: width 0.3s;
         }
         .navbar .nav-links a:hover {
-            color: #2e7d32;
+            color: #fff;
         }
         .navbar .nav-links a:hover::after {
             width: 100%;
@@ -87,10 +88,10 @@
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: #1e3a1e;
+            color: #cfd8e6;
         }
 
-        /* ===== 通用淡入动画 ===== */
+        /* ===== 通用淡入 ===== */
         .fade-up {
             opacity: 0;
             transform: translateY(30px);
@@ -103,29 +104,33 @@
 
         /* ===== Hero ===== */
         .hero {
-            padding: 140px 0 70px;
+            padding: 150px 0 70px;
             text-align: center;
+            background: linear-gradient(145deg, #e8f5e9 0%, #fff8e1 40%, #e0f7fa 100%);
+            border-bottom: 4px solid #ffcc80;
         }
         .hero .avatar {
             display: inline-block;
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #2e7d32, #66bb6a);
+            background: linear-gradient(135deg, #2e7d32, #66bb6a, #ffcc80);
             margin-bottom: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             font-weight: 700;
             color: #fff;
-            box-shadow: 0 10px 28px rgba(46, 125, 50, 0.25);
+            box-shadow: 0 12px 32px rgba(46, 125, 50, 0.25);
         }
         .hero h1 {
-            font-size: 3.6rem;
+            font-size: 3.8rem;
             font-weight: 800;
             letter-spacing: -0.5px;
-            color: #1a2e1a;
+            background: linear-gradient(135deg, #1a3a3a, #2e7d32, #f9a825);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 8px;
         }
         .hero .subhead {
@@ -133,48 +138,68 @@
             color: #2e7d32;
             font-weight: 500;
             margin-bottom: 20px;
+            background: rgba(255,255,255,0.6);
+            display: inline-block;
+            padding: 4px 24px;
+            border-radius: 40px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(46, 125, 50, 0.15);
         }
         .hero .bio {
-            max-width: 700px;
+            max-width: 720px;
             margin: 0 auto 32px;
             font-size: 1.05rem;
-            color: #3a4a3a;
-            background: rgba(255,255,255,0.6);
-            padding: 20px 28px;
-            border-radius: 24px;
-            border-left: 5px solid #66bb6a;
+            color: #1e3a3a;
+            background: rgba(255,255,255,0.75);
+            padding: 22px 32px;
+            border-radius: 28px;
+            border-left: 6px solid #ffb300;
             backdrop-filter: blur(4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+        }
+        .hero .bio i {
+            color: #f9a825;
         }
         .hero .cta-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #2e7d32, #43a047);
+            background: linear-gradient(135deg, #2e7d32, #66bb6a, #f9a825);
             color: #fff;
-            padding: 14px 40px;
+            padding: 14px 44px;
             border-radius: 60px;
             font-weight: 600;
             font-size: 1rem;
-            box-shadow: 0 6px 18px rgba(46, 125, 50, 0.30);
+            box-shadow: 0 8px 24px rgba(46, 125, 50, 0.30);
             transition: transform 0.2s, box-shadow 0.3s;
         }
         .hero .cta-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(46, 125, 50, 0.40);
+            box-shadow: 0 14px 34px rgba(46, 125, 50, 0.40);
         }
 
-        /* ===== 通用标题 ===== */
+        /* ===== 板块标题 ===== */
         .section-title {
             font-size: 2.2rem;
             font-weight: 700;
             text-align: center;
             margin-bottom: 40px;
-            color: #1a2e1a;
+            color: #1a2a2e;
+            position: relative;
         }
         .section-title i {
-            color: #2e7d32;
-            margin-right: 10px;
+            margin-right: 12px;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            margin: 10px auto 0;
+            border-radius: 4px;
         }
 
-        /* ===== 项目卡片 ===== */
+        /* ===== 项目卡片 (蓝绿系) ===== */
+        #projects .section-title i { color: #00897b; }
+        #projects .section-title::after { background: linear-gradient(90deg, #00897b, #4dd0e1); }
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -182,15 +207,15 @@
         }
         .project-card {
             background: #fff;
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 6px 24px rgba(46, 125, 50, 0.06);
+            box-shadow: 0 8px 28px rgba(0, 137, 123, 0.08);
             transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(46, 125, 50, 0.06);
+            border: 1px solid #e0f2f1;
         }
         .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 18px 40px rgba(46, 125, 50, 0.12);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 48px rgba(0, 137, 123, 0.18);
         }
         .project-card img {
             width: 100%;
@@ -205,10 +230,10 @@
             font-size: 1.2rem;
             font-weight: 700;
             margin-bottom: 8px;
-            color: #1e2e1e;
+            color: #004d40;
         }
         .project-card .card-body p {
-            color: #4a5a4a;
+            color: #4a5a5a;
             font-size: 0.95rem;
             margin-bottom: 16px;
         }
@@ -219,79 +244,149 @@
             margin-bottom: 18px;
         }
         .project-card .tags span {
-            background: #e8f5e9;
-            color: #2e7d32;
             font-size: 0.75rem;
             font-weight: 600;
-            padding: 4px 14px;
+            padding: 4px 16px;
             border-radius: 30px;
+            border: 1px solid;
         }
+        .project-card .tags span:nth-child(1) { background: #e0f2f1; color: #00695c; border-color: #b2dfdb; }
+        .project-card .tags span:nth-child(2) { background: #e3f2fd; color: #0d47a1; border-color: #bbdefb; }
+        .project-card .tags span:nth-child(3) { background: #f3e5f5; color: #6a1b9a; border-color: #ce93d8; }
+        .project-card .tags span:nth-child(4) { background: #fff3e0; color: #e65100; border-color: #ffcc80; }
         .project-card .btn-outline {
             display: inline-block;
-            border: 2px solid #2e7d32;
-            color: #2e7d32;
-            padding: 6px 22px;
+            border: 2px solid #00897b;
+            color: #00897b;
+            padding: 6px 24px;
             border-radius: 40px;
             font-weight: 600;
             font-size: 0.85rem;
             transition: 0.2s;
         }
         .project-card .btn-outline:hover {
-            background: #2e7d32;
+            background: #00897b;
             color: #fff;
         }
 
-        /* ===== 实习时间线 ===== */
+        /* ===== 实习时间线 (暖橙/琥珀系) ===== */
+        #experience .section-title i { color: #f57c00; }
+        #experience .section-title::after { background: linear-gradient(90deg, #f57c00, #ffb74d); }
+        #experience { background: #fff8e1; }
         .timeline {
-            max-width: 700px;
+            max-width: 780px;
             margin: 0 auto;
-            padding-left: 28px;
-            border-left: 4px solid #a5d6a7;
+            padding-left: 30px;
+            border-left: 4px solid #ffcc80;
         }
         .timeline-item {
-            margin-bottom: 36px;
+            margin-bottom: 40px;
             position: relative;
+            background: #fffde7;
+            padding: 18px 24px 18px 32px;
+            border-radius: 20px;
+            box-shadow: 0 2px 12px rgba(245, 124, 0, 0.06);
+            border: 1px solid #ffe0b2;
+            transition: box-shadow 0.3s;
+        }
+        .timeline-item:hover {
+            box-shadow: 0 8px 24px rgba(245, 124, 0, 0.12);
         }
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -36px;
-            top: 6px;
+            left: -38px;
+            top: 24px;
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            background: #2e7d32;
-            border: 3px solid #f5faf5;
-            box-shadow: 0 0 0 3px #a5d6a7;
+            background: linear-gradient(135deg, #f57c00, #ffb74d);
+            border: 3px solid #fff8e1;
+            box-shadow: 0 0 0 3px #ffcc80;
         }
         .timeline-item .time {
             font-size: 0.85rem;
             font-weight: 600;
-            color: #2e7d32;
+            color: #ef6c00;
+            letter-spacing: 0.5px;
         }
         .timeline-item h4 {
             font-size: 1.1rem;
             font-weight: 700;
             margin: 4px 0 6px;
+            color: #1a2a2a;
         }
         .timeline-item .company {
-            font-weight: 500;
-            color: #2e7d32;
+            font-weight: 600;
+            color: #e65100;
         }
-        .timeline-item p {
-            color: #4a5a4a;
+        .timeline-item .desc {
+            color: #3a4a3a;
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+        .timeline-item .desc i {
+            color: #f57c00;
+            margin-right: 6px;
         }
 
-        /* ===== 技能 ===== */
+        /* ===== 学生干部 (紫罗兰系) ===== */
+        #leadership .section-title i { color: #7b1fa2; }
+        #leadership .section-title::after { background: linear-gradient(90deg, #7b1fa2, #ce93d8); }
+        #leadership { background: #f3e5f5; }
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            margin-top: 10px;
+        }
+        .leadership-card {
+            background: #fff;
+            padding: 22px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 16px rgba(123, 31, 162, 0.06);
+            border: 1px solid #e1bee7;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+        }
+        .leadership-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(123, 31, 162, 0.12);
+        }
+        .leadership-card i {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+        .leadership-card:nth-child(1) i { color: #7b1fa2; }
+        .leadership-card:nth-child(2) i { color: #6a1b9a; }
+        .leadership-card:nth-child(3) i { color: #8e24aa; }
+        .leadership-card:nth-child(4) i { color: #ab47bc; }
+        .leadership-card:nth-child(5) i { color: #9c27b0; }
+        .leadership-card:nth-child(6) i { color: #7b1fa2; }
+        .leadership-card h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a2a2a;
+        }
+        .leadership-card p {
+            font-size: 0.9rem;
+            color: #4a4a5a;
+            margin-top: 4px;
+        }
+
+        /* ===== 技能 (多彩标签) ===== */
+        #skills .section-title i { color: #e91e63; }
+        #skills .section-title::after { background: linear-gradient(90deg, #e91e63, #ffb74d, #4dd0e1); }
+        #skills { background: #fafafa; }
         .skills-section {
             background: #fff;
-            border-radius: 24px;
-            padding: 36px 28px;
-            box-shadow: 0 4px 20px rgba(46, 125, 50, 0.04);
-            border: 1px solid #e8f5e9;
+            border-radius: 28px;
+            padding: 40px 32px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            border: 1px solid #e8e8e8;
         }
         .skills-group {
-            margin-bottom: 26px;
+            margin-bottom: 28px;
         }
         .skills-group:last-child {
             margin-bottom: 0;
@@ -299,8 +394,11 @@
         .skills-group h4 {
             font-size: 1rem;
             font-weight: 700;
-            color: #1e3a1e;
+            color: #1a2a2a;
             margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         .skills-group .tags {
             display: flex;
@@ -308,22 +406,39 @@
             gap: 10px;
         }
         .skills-group .tags span {
-            background: #f0f7f0;
-            color: #1e3a1e;
-            padding: 6px 18px;
-            border-radius: 30px;
+            padding: 6px 20px;
+            border-radius: 40px;
             font-size: 0.85rem;
-            border: 1px solid #d4e8d4;
-            transition: 0.2s;
+            font-weight: 500;
+            border: 1px solid transparent;
+            transition: 0.25s;
             cursor: default;
         }
         .skills-group .tags span:hover {
-            background: #2e7d32;
-            color: #fff;
-            border-color: #2e7d32;
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
+        /* AI与数据 - 蓝紫系 */
+        .skills-group:nth-child(1) .tags span:nth-child(1) { background: #e3f2fd; color: #0d47a1; border-color: #90caf9; }
+        .skills-group:nth-child(1) .tags span:nth-child(2) { background: #e8eaf6; color: #283593; border-color: #9fa8da; }
+        .skills-group:nth-child(1) .tags span:nth-child(3) { background: #e0f7fa; color: #00695c; border-color: #80deea; }
+        .skills-group:nth-child(1) .tags span:nth-child(4) { background: #f3e5f5; color: #6a1b9a; border-color: #ce93d8; }
+        .skills-group:nth-child(1) .tags span:nth-child(5) { background: #e8f5e9; color: #1b5e20; border-color: #81c784; }
+        /* 内容与创作 - 暖色系 */
+        .skills-group:nth-child(2) .tags span:nth-child(1) { background: #fff3e0; color: #e65100; border-color: #ffcc80; }
+        .skills-group:nth-child(2) .tags span:nth-child(2) { background: #fce4ec; color: #880e4f; border-color: #f48fb1; }
+        .skills-group:nth-child(2) .tags span:nth-child(3) { background: #fff8e1; color: #f57f17; border-color: #ffd54f; }
+        .skills-group:nth-child(2) .tags span:nth-child(4) { background: #fbe9e7; color: #bf360c; border-color: #ffab91; }
+        /* 语言与资质 - 冷色系 */
+        .skills-group:nth-child(3) .tags span:nth-child(1) { background: #e0f2f1; color: #004d40; border-color: #80cbc4; }
+        .skills-group:nth-child(3) .tags span:nth-child(2) { background: #e8f5e9; color: #1b5e20; border-color: #a5d6a7; }
+        .skills-group:nth-child(3) .tags span:nth-child(3) { background: #e3f2fd; color: #0d47a1; border-color: #90caf9; }
+        .skills-group:nth-child(3) .tags span:nth-child(4) { background: #fce4ec; color: #880e4f; border-color: #f48fb1; }
 
-        /* ===== 联系 ===== */
+        /* ===== 联系 (青蓝+薄荷) ===== */
+        #contact .section-title i { color: #00796b; }
+        #contact .section-title::after { background: linear-gradient(90deg, #00796b, #4dd0e1); }
+        #contact { background: #e0f2f1; }
         .contact-section {
             text-align: center;
             padding: 20px 0 10px;
@@ -340,29 +455,29 @@
             align-items: center;
             gap: 10px;
             font-size: 1rem;
-            color: #1e2e1e;
+            color: #004d40;
             font-weight: 500;
             transition: color 0.2s;
         }
         .contact-section .contact-info a i {
-            font-size: 1.3rem;
-            color: #2e7d32;
+            font-size: 1.4rem;
+            color: #00796b;
         }
         .contact-section .contact-info a:hover {
-            color: #2e7d32;
+            color: #004d40;
         }
         .contact-section .social-links {
             display: flex;
             justify-content: center;
-            gap: 24px;
+            gap: 28px;
         }
         .contact-section .social-links a {
             font-size: 2rem;
-            color: #4a6a4a;
+            color: #00695c;
             transition: color 0.2s, transform 0.2s;
         }
         .contact-section .social-links a:hover {
-            color: #2e7d32;
+            color: #00796b;
             transform: scale(1.1);
         }
 
@@ -370,11 +485,21 @@
         .footer {
             text-align: center;
             padding: 40px 0 28px;
-            border-top: 1px solid #dce8dc;
-            margin-top: 40px;
-            color: #6a7a6a;
+            border-top: 1px solid #cfd8dc;
+            margin-top: 0;
+            color: #78909c;
             font-size: 0.9rem;
+            background: #263238;
         }
+        .footer .container {
+            color: #b0bec5;
+        }
+        .footer i {
+            margin: 0 4px;
+        }
+        .footer i.fa-heart { color: #ef5350; }
+        .footer i.fa-leaf { color: #66bb6a; }
+        .footer i.fa-star { color: #ffd54f; }
 
         /* ===== 响应式 ===== */
         @media (max-width: 768px) {
@@ -384,7 +509,7 @@
                 width: 100%;
                 gap: 12px;
                 padding-top: 16px;
-                border-top: 1px solid #dce8dc;
+                border-top: 1px solid rgba(255,255,255,0.1);
             }
             .navbar .nav-links.active {
                 display: flex;
@@ -404,6 +529,9 @@
             .timeline {
                 padding-left: 20px;
             }
+            .timeline-item {
+                padding-left: 20px;
+            }
             .timeline-item::before {
                 left: -28px;
                 width: 12px;
@@ -413,6 +541,9 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 16px;
+            }
+            .leadership-grid {
+                grid-template-columns: 1fr 1fr;
             }
         }
         @media (max-width: 480px) {
@@ -425,6 +556,9 @@
             .section-title {
                 font-size: 1.8rem;
             }
+            .leadership-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -433,7 +567,7 @@
     <!-- ===== 导航 ===== -->
     <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="logo"><i class="fas fa-leaf"></i> 康汪洋 · AI + 人文</div>
+            <div class="logo"><i class="fas fa-compass"></i> 康汪洋 · AI + 人文</div>
             <div class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -441,6 +575,7 @@
                 <li><a href="#hero">关于</a></li>
                 <li><a href="#projects">项目</a></li>
                 <li><a href="#experience">实习</a></li>
+                <li><a href="#leadership">干部·荣誉</a></li>
                 <li><a href="#skills">技能</a></li>
                 <li><a href="#contact">联系</a></li>
             </ul>
@@ -454,25 +589,24 @@
             <h1>康汪洋</h1>
             <p class="subhead">比较文学与世界文学硕士（2027届）· AI产品运营 · 多模态内容创作者</p>
             <div class="bio">
-                <i class="fas fa-quote-left" style="color:#66bb6a; margin-right:6px;"></i>
+                <i class="fas fa-quote-left" style="margin-right:8px;"></i>
                 我是兼具人文洞察与技术理解力的复合型创作者。曾在百度、百川智能等公司从事AI产品运营与数据生产，并作为负责人研发了基于大语言模型与VR技术的文化出海互动平台“蜀吟诗画”。我致力于用AI工具重新诠释人文内容的体验边界，从广告ROI优化到多模态交互设计，始终以数据驱动与人文温度并重。
             </div>
-            <a href="#projects" class="cta-btn"><i class="fas fa-arrow-down" style="margin-right:10px;"></i>查看项目</a>
+            <a href="#projects" class="cta-btn"><i class="fas fa-arrow-down" style="margin-right:12px;"></i>查看项目</a>
         </div>
     </section>
 
-    <!-- ===== 核心项目 ===== -->
-    <section id="projects" style="padding: 60px 0 40px;">
+    <!-- ===== 核心项目 (蓝绿系) ===== -->
+    <section id="projects" style="padding: 60px 0 40px; background: #f5fafa;">
         <div class="container">
             <h2 class="section-title"><i class="fas fa-code-branch"></i> 核心项目</h2>
             <div class="projects-grid">
 
-                <!-- 项目1 -->
                 <div class="project-card fade-up">
-                    <img src="https://picsum.photos/seed/101/400/300" alt="蜀吟诗画">
+                    <img src="https://picsum.photos/seed/201/400/300" alt="蜀吟诗画">
                     <div class="card-body">
-                        <h3>蜀吟诗画 — 多模态大模型+VR文化平台</h3>
-                        <p>负责人。自研古乐识别模块，使用时长提升25%；基于大语言模型搭建“古人对谈”系统；自研VR轻量化制作流程，产出20+部文化剧目。</p>
+                        <h3>蜀吟诗画 · 多模态文化平台</h3>
+                        <p>负责人。自研古乐识别模块，使用时长提升25%；基于大语言模型搭建"古人对谈"系统；自研VR轻量化制作流程，产出20+部文化剧目。</p>
                         <div class="tags">
                             <span>多模态大模型</span>
                             <span>VR</span>
@@ -483,12 +617,11 @@
                     </div>
                 </div>
 
-                <!-- 项目2 -->
                 <div class="project-card fade-up">
-                    <img src="https://picsum.photos/seed/102/400/300" alt="数据质控">
+                    <img src="https://picsum.photos/seed/202/400/300" alt="数据质控">
                     <div class="card-body">
-                        <h3>大模型训练数据质控体系搭建</h3>
-                        <p>在百川智能实习期间，从零搭建数据质量保障SOP，累计交付数千条高质量语料，支撑2次模型版本迭代。</p>
+                        <h3>大模型训练数据质控体系</h3>
+                        <p>从零搭建数据质量保障SOP，累计交付数千条高质量语料，支撑2次模型版本迭代。</p>
                         <div class="tags">
                             <span>数据运营</span>
                             <span>SOP搭建</span>
@@ -498,12 +631,11 @@
                     </div>
                 </div>
 
-                <!-- 项目3 -->
                 <div class="project-card fade-up">
-                    <img src="https://picsum.photos/seed/103/400/300" alt="广告ROI">
+                    <img src="https://picsum.photos/seed/203/400/300" alt="广告ROI">
                     <div class="card-body">
                         <h3>日韩市场广告ROI提升策略</h3>
-                        <p>在百度实习期间，通过AB实验与用户分层运营，有效提升广告主ROI 40%，消耗提升27%。</p>
+                        <p>通过AB实验与用户分层运营，有效提升广告主ROI 40%，消耗提升27%。</p>
                         <div class="tags">
                             <span>广告运营</span>
                             <span>AB实验</span>
@@ -516,37 +648,93 @@
         </div>
     </section>
 
-    <!-- ===== 实习履历 ===== -->
-    <section id="experience" style="padding: 40px 0 60px;">
+    <!-- ===== 实习经历 (暖橙系) ===== -->
+    <section id="experience" style="padding: 60px 0 40px;">
         <div class="container">
-            <h2 class="section-title"><i class="fas fa-briefcase"></i> 实习履历</h2>
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> 实习经历</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="time">2024.06 – 2024.09</div>
-                    <h4><span class="company">百度</span> · 海外广告运营</h4>
-                    <p>通过AB实验与用户分层，提升ROI 40%，消耗提升27%</p>
+                    <h4><span class="company">百度</span> · 国际化产品研发中心 海外广告运营</h4>
+                    <div class="desc">
+                        <i class="fas fa-chart-line"></i> 通过AB实验与用户分层，提升ROI 40%，消耗提升27%<br>
+                        <i class="fas fa-users"></i> 管理20+客户150+账号，定制个性化策略
+                    </div>
                 </div>
                 <div class="timeline-item">
                     <div class="time">2023.01 – 2024.06</div>
-                    <h4><span class="company">美团</span> · SaaS综合支持</h4>
-                    <p>完成300+人次业务培训，推动培训内容迭代</p>
+                    <h4><span class="company">美团</span> · SaaS事业部 综合支持</h4>
+                    <div class="desc">
+                        <i class="fas fa-chalkboard-teacher"></i> 完成300+人次业务培训，推动培训内容迭代<br>
+                        <i class="fas fa-paint-brush"></i> 独立完成课件设计与物料制作
+                    </div>
                 </div>
                 <div class="timeline-item">
                     <div class="time">2022.12 – 2023.01</div>
                     <h4><span class="company">百川智能</span> · 大模型内容编辑</h4>
-                    <p>搭建SOP，交付数千条高质量语料，支撑2次模型迭代</p>
+                    <div class="desc">
+                        <i class="fas fa-file-alt"></i> 搭建数据质量SOP，交付数千条高质量语料<br>
+                        <i class="fas fa-sync-alt"></i> 支撑2次模型版本迭代
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time">2023.09 – 2023.12</div>
+                    <h4><span class="company">四川日报报业集团</span> · 传媒研究中心 新媒体/美术编辑</h4>
+                    <div class="desc">
+                        <i class="fas fa-video"></i> 设计AI主播等多模态视频内容，提升浏览量<br>
+                        <i class="fas fa-book-open"></i> 担任C刊美术编辑，使用InDesign排版
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== 技能 ===== -->
-    <section id="skills" style="padding: 40px 0 60px;">
+    <!-- ===== 学生干部 & 荣誉 (紫罗兰系) ===== -->
+    <section id="leadership" style="padding: 60px 0 40px;">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-user-graduate"></i> 学生干部 · 荣誉</h2>
+            <div class="leadership-grid">
+                <div class="leadership-card">
+                    <i class="fas fa-flag"></i>
+                    <h4>党支部书记</h4>
+                    <p>文学院2024级本科党支部书记</p>
+                </div>
+                <div class="leadership-card">
+                    <i class="fas fa-newspaper"></i>
+                    <h4>新闻中心采写部副部长</h4>
+                    <p>四川大学新闻中心</p>
+                </div>
+                <div class="leadership-card">
+                    <i class="fas fa-users"></i>
+                    <h4>班长</h4>
+                    <p>比较文学专业 · 拔尖班</p>
+                </div>
+                <div class="leadership-card">
+                    <i class="fas fa-award"></i>
+                    <h4>国家奖学金</h4>
+                    <p>连续六年校级优秀学生/干部</p>
+                </div>
+                <div class="leadership-card">
+                    <i class="fas fa-trophy"></i>
+                    <h4>竞赛获奖</h4>
+                    <p>大创国家级×2 · 挑战杯×2 · 互联网+</p>
+                </div>
+                <div class="leadership-card">
+                    <i class="fas fa-globe-asia"></i>
+                    <h4>国际周组织者</h4>
+                    <p>服务7000+师生 · 策划"蜀地工坊"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 技能 (多彩) ===== -->
+    <section id="skills" style="padding: 60px 0 40px;">
         <div class="container">
             <h2 class="section-title"><i class="fas fa-cogs"></i> 技能与专长</h2>
             <div class="skills-section">
                 <div class="skills-group">
-                    <h4><i class="fas fa-brain" style="color:#2e7d32; margin-right:8px;"></i> AI与数据</h4>
+                    <h4><i class="fas fa-brain" style="color:#0d47a1;"></i> AI与数据</h4>
                     <div class="tags">
                         <span>Prompt Engineering</span>
                         <span>大模型数据运营</span>
@@ -556,28 +744,29 @@
                     </div>
                 </div>
                 <div class="skills-group">
-                    <h4><i class="fas fa-paint-brush" style="color:#2e7d32; margin-right:8px;"></i> 内容与创作</h4>
+                    <h4><i class="fas fa-paint-brush" style="color:#e65100;"></i> 内容与创作</h4>
                     <div class="tags">
                         <span>多模态内容制作</span>
                         <span>视频剪辑</span>
-                        <span>平面设计(AI/PS/ID)</span>
-                        <span>新媒体运营(50W+浏览量)</span>
+                        <span>平面设计 (AI/PS/ID)</span>
+                        <span>新媒体运营 (50W+浏览量)</span>
                     </div>
                 </div>
                 <div class="skills-group">
-                    <h4><i class="fas fa-language" style="color:#2e7d32; margin-right:8px;"></i> 语言与资质</h4>
+                    <h4><i class="fas fa-language" style="color:#004d40;"></i> 语言与资质</h4>
                     <div class="tags">
-                        <span>英语六级(国际会议报告)</span>
+                        <span>英语六级 (国际会议报告)</span>
                         <span>普通话一乙</span>
                         <span>高级中学教师资格证</span>
+                        <span>钢琴十级</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== 联系 ===== -->
-    <section id="contact" style="padding: 20px 0 40px;">
+    <!-- ===== 联系 (青蓝系) ===== -->
+    <section id="contact" style="padding: 40px 0 20px;">
         <div class="container contact-section">
             <h2 class="section-title"><i class="fas fa-envelope"></i> 联系我</h2>
             <div class="contact-info">
@@ -589,8 +778,8 @@
                 <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
-            <p style="margin-top:24px; color:#6a7a6a; font-size:0.95rem;">
-                <i class="fas fa-leaf" style="color:#66bb6a;"></i> 用AI与好奇心，重构人文体验。
+            <p style="margin-top:24px; color:#004d40; font-size:0.95rem;">
+                <i class="fas fa-compass" style="color:#00796b;"></i> 用AI与好奇心，重构人文体验。
             </p>
         </div>
     </section>
@@ -598,28 +787,25 @@
     <!-- ===== 页脚 ===== -->
     <footer class="footer">
         <div class="container">
-            © 2026 康汪洋 · Built with <i class="fas fa-heart" style="color:#66bb6a;"></i> & <i class="fas fa-leaf" style="color:#2e7d32;"></i>
+            © 2026 康汪洋 · Built with <i class="fas fa-heart"></i> &amp; <i class="fas fa-leaf"></i> &amp; <i class="fas fa-star"></i>
         </div>
     </footer>
 
     <!-- ===== 交互脚本 ===== -->
     <script>
-        // 移动端菜单切换
         document.getElementById('menuToggle').addEventListener('click', function() {
             document.getElementById('navLinks').classList.toggle('active');
         });
 
-        // 滚动时导航栏阴影（可选增强）
         window.addEventListener('scroll', function() {
             const nav = document.getElementById('navbar');
             if (window.scrollY > 20) {
-                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.04)';
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.15)';
             } else {
                 nav.style.boxShadow = 'none';
             }
         });
 
-        // 淡入动画（Intersection Observer）
         const faders = document.querySelectorAll('.fade-up');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
